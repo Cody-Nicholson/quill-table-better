@@ -123,6 +123,8 @@ class TableSelect {
       case 'Enter':
         this.insertTableHandler(this.keyboardY + 1, this.keyboardX + 1);
         this.hide(this.root);
+        this.keyboardX = 0;
+        this.keyboardY = 0;
         break;
     }
 

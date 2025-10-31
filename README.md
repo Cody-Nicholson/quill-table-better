@@ -196,7 +196,7 @@ const toolbarOptions = [
 ```
 
 ### headerTable
-`headerTable` allows the table to be initilized where the first table row includes table header `<th>` elements.  
+`headerTable` allows the table to be initialized where the first table row includes table header `<th>` elements.  
 **Note** Headers may still be toggled on/off via the table row menu.
 
 ### toolbarButtons

@@ -139,6 +139,7 @@ class TableSelect {
       }
     }
     lastSquare.focus();
+     this.setLabelContent(container.lastElementChild, lastSquare);
   }
 
   handleMouseMove(e: MouseEvent, container: Element) {

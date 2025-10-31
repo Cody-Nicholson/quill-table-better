@@ -47,6 +47,7 @@ interface Options {
     singleWhiteList?: string[];
   }
   toolbarTable?: boolean;
+  headerTable?: boolean;
 }
 
 type Line = TableCellBlock | TableHeader | ListContainer;
@@ -236,8 +237,18 @@ class Table extends Module {
       .delete(range.length)
       .concat(extraDelta)
       .insert('\n', { [TableTemporary.blotName]: { style } });
-    const delta = new Array(rows).fill(0).reduce(memo => {
+    const delta = new Array(rows).fill(0).reduce((memo, _value, index) => {
       const id = tableId();
+
+      if (index === 0 && this.options.headerTable) {
+        return new Array(columns).fill('\n').reduce((memo, text) => {
+          return memo.insert(text, {
+            [TableCellBlock.blotName]: cellId(),
+            [TableTh.blotName]: { 'data-row': id }
+          });
+        }, memo);
+      }
+
       return new Array(columns).fill('\n').reduce((memo, text) => {
         return memo.insert(text, {
           [TableCellBlock.blotName]: cellId(),

@@ -223,7 +223,8 @@ toolbarButtons: {
     whiteList: ['link', 'image'],
     singleWhiteList: ['link', 'image']
   },
-  toolbarTable: true
+  toolbarTable: true,
+  headerTable: false,
 }
 ```
 

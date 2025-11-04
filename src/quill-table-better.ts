@@ -259,6 +259,7 @@ class Table extends Module {
     this.quill.updateContents(delta, Quill.sources.USER);
     this.quill.setSelection(range.index + _offset, Quill.sources.SILENT);
     this.showTools();
+    this.cellSelection.setHeaderRowSwitch();
   }
 
   // Inserting tables within tables is currently not supported

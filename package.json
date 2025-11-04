@@ -1,6 +1,6 @@
 {
-  "name": "quill-table-better",
-  "version": "1.2.4",
+  "name": "@alchemyzt/quill-table-better",
+  "version": "1.3.1",
   "description": "A module that enhances the table functionality of Quill",
   "main": "dist/quill-table-better.js",
   "types": "dist/types/index.d.ts",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/attoae/quill-table-better.git"
+    "url": "git+https://github.com/Cody-Nicholson/quill-table-better.git"
   },
   "keywords": [
     "quill",
     "quill.js",
     "quill-table"
   ],
-  "author": "attoae",
+  "author": "Cody Nicholson",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/attoae/quill-table-better/issues"
